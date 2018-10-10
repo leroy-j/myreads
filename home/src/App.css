@@ -1,0 +1,393 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+html, body, .root {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+}
+body, .app {
+  background: white;
+}
+
+/* main page */
+
+.list-books-title {
+  padding: 10px 0;
+  background: #2e7c31;
+  text-align: center;
+}
+.list-books-title h1 {
+  font-weight: 400;
+  margin: 0;
+  color: white;
+}
+
+.list-books-content {
+  padding: 0 0 80px;
+  flex: 1;
+}
+
+.bookshelf {
+  padding: 0 10px 20px;
+}
+
+@media (min-width: 600px) {
+  .bookshelf {
+    padding: 0 20px 40px;
+  }
+}
+
+.bookshelf-title {
+  border-bottom: 1px solid #dedede;
+}
+.bookshelf-books {
+  text-align: center;
+}
+
+.open-search {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+}
+.open-search a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #2e7d32;
+  background-image: url('./icons/add.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 28px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-size: 0;
+}
+
+/* search page */
+
+.search-books-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+}
+.search-books-input-wrapper {
+  min-height:30px;
+  flex: 1;
+}
+.search-books-bar input {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 1.25em;
+  border: none;
+  outline: none;
+  backgrouns-color:#ff;
+  border:1px solid #ccc;
+}
+
+.close-search {
+  display: block;
+  top: 20px;
+  left: 15px;
+  width: 50px;
+  height: 53px;
+  background: white;
+  background-image: url('./icons/arrow-back.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  font-size: 0;
+}
+
+.search-books-results {
+  padding: 80px 10px 20px;
+}
+
+/* books grid */
+
+.books-grid {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.books-grid li {
+  padding: 10px 15px;
+  text-align: left;
+  max-height:380px;
+  position:relative;
+  overflow-y:hidden
+}
+
+.book {
+  width: 140px;
+}
+.book-title,
+.book-authors {
+  font-size: 0.8em;
+}
+.book-title {
+  margin-top: 10px;
+}
+.book-authors {
+  color: #999;
+}
+
+.book-top {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.book-shelf-changer {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #60ac5d;
+  background-image: url('./icons/arrow-drop-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.book-shelf-changer select {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+
+/* book cover */
+.book-cover {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background: #eee;
+	width:128;
+	height:192;
+}
+
+.book-cover-title {
+  padding: 20px 10px 0;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.books-results-list{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  z-index: 100;
+  position: relative;
+  top: -40px;
+  left: 40px;
+  background-color:#fff;
+}
+
+.books-results-list li{
+  position: relative;
+  display: block;
+  padding: .75rem 1.25rem;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+}
+
+.books-results-list a{
+  text-decoration:none;
+}
+
+.book-result-title{
+  margin-left:4%;
+  display:inline-block;
+  width:80%
+}
+
+.search-result{
+  padding:10px;
+  min-height:200px
+}
+.popular-books{
+  pading:10px;
+}
+
+.popular-books > h2{
+  justify-content: left;
+  border-bottom:1px solid; 
+}
+.popular-title{
+  color:#333;
+  font-size:18px;
+  margin: 5px 0;
+  height:50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ol > li{
+list-style:none
+}
+
+.btn {
+  background-color: transparent;
+  color: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  text-decoration:none;
+  opacity: .01;
+  outline: 0;
+  overflow: visible;
+  z-index: 20
+}
+
+.btn.default{
+  padding:4px 6px;
+  color:#222;
+  background-color:#f6f6f6;
+  border:1px solid #888;
+  width:150px;
+  margin:5px 0;
+  opacity:0.9;
+  border-radius:3px;
+  text-align:center;
+}
+
+.btn.active{
+  padding:4px 6px;
+  color:#fff;
+  background-color:#60ac5d;
+  width:150px;
+  margin:5px 0;
+  opacity:0.9;
+  border-radius:3px;
+  text-align:center;
+  opacity:1
+}
+
+/**  modals*/
+
+.modal {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.modal-body{
+  z-index: 100; 
+  background-color: rgb(255, 255, 255); 
+  width: 90%; 
+  margin: 20%;
+   padding:0;
+}
+
+
+.modal-header{
+  madding:0;
+  tex-align:center;
+  background-color:#2e7d32;
+  color:#fff
+}
+
+.modal-header > button{
+  display:inline-block;
+  float:right;
+}
+
+.close{
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+h5.modal-title {
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  display: inline;
+  padding:0 10px
+}
+
+.modal-content .right, .modal-content .left{
+  display:inline-block;
+  float:left;
+  padding:10px;
+  margin:0 10px;
+} 
+
+.left{ 
+  width:40%;
+}
+.right{
+  width:51%;
+  overflow-y:scroll;
+  max-height:300px
+} 
+.preview-book-title{
+  padding:5px;
+  font-size:1.2em;
+  line-height: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 .8em;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.preview-book-description{
+  padding: 0 .8em;
+  text-align: left;
+  overflow-y: scroll;
+  display: block;
+  max-height: 200px;
+  white-space: normal;
+  font-size: .9em;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .modal-body{max-height:80%}
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .modal-body{
+      position: relative;
+      top: 80px;
+    } 
+}
