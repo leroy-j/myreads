@@ -107,7 +107,6 @@ render(){
               	<a href="" title="Click to preview"  onClick={this.onPreview} name={book.id} className="book-cover" 
 									style={{width: '128px',height: '192px',backgroundImage: 'url('+book.imageLinks.thumbnail+')'}} >  
 					 			</a>
-						
 						<div className="book-shelf-changer">
 							<select onChange={this.props.onChange} defaultValue={book.shelf?book.shelf:'none'} name={book.id}>
 								<option value="move" disabled="">Move to...</option>
