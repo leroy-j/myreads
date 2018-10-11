@@ -73,12 +73,10 @@ onPreview(e) {
          { 
            stars.map((star,i)=>{ 
                if(star === '5')
-                 return (<span key={i} className="rating"> 
- 						  <label className="half" htmlFor="star{star}"></label>
+                 return (<span key={i} className="rating"><label className="half" htmlFor="star{star}"></label>
   						</span>)
                 else if(star ==='x'){ 
-                  return (<span key={i} className="empty"> 
- 						  <label className="half" htmlFor="star{i}" ></label>
+                  return (<span key={i} className="empty"><label className="half" htmlFor="star{i}" ></label>
   						</span>)
                 }
                  else
