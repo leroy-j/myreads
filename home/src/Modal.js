@@ -35,12 +35,12 @@ class Modal extends Component{
 			  }
 			</p>
 		      </div>
-		     <div className="right">
-					<p className="publish">
+			<div className="right">
+				<p className="publish">
 					  {this.props.selectedSearch.publisher }<br />
 					  {this.props.selectedSearch.publishedDate}
                     </p>
-				   <p>Description:</p>	
+				<p>Description:</p>	
 					<span className="preview-book-description"> 
 						{this.props.selectedSearch.description}
 					</span>
