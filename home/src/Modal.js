@@ -5,10 +5,10 @@ class Modal extends Component{
     return (
         <div className="DialogHolder">
           <div className="mini-modal" style={{display:'block'}}>
-		    <div className="mini-modal-body">
-			  <div className="mini-modal-main">
-			    <div className="mini-modal-header">
-				  <h5 className="mini-modal-title">Preview</h5>
+	    			<div className="mini-modal-body">
+							<div className="mini-modal-main">
+								<div className="mini-modal-header">
+									<h5 className="mini-modal-title">Preview</h5>
                   <button onClick={this.props.onHideModal} className="close-preview">
                     <span>×</span>
                 	</button>
