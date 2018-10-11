@@ -20,10 +20,10 @@ class Modal extends Component{
 				  <div className="left">
 				    <div className="book-cover"    
 					  style={{
-							    width: '128px', 
-								height: '192px', 
-								backgroundImage: 'url("'+this.props.selectedSearch.imageLinks.thumbnail+'")'
-							}}></div>
+						  width: '128px', 
+						  height: '192px', 
+						  backgroundImage: 'url("'+this.props.selectedSearch.imageLinks.thumbnail+'")'
+						}}></div>
 					<p>
 					  {
 						((this.props.selectedSearch.industryIdentifiers).length && (
