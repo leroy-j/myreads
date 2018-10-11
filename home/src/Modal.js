@@ -4,16 +4,16 @@ class Modal extends Component{
   render(){ console.log('Modal:',this.props)
     return (
         <div className="DialogHolder">
-          <div className="modal" style={{display:'block'}}>
-		    <div className="modal-body">
-			  <div className="modal-main">
-			    <div className="modal-header">
-				  <h5 className="modal-title">Preview</h5>
-                  <button onClick={this.props.onHideModal} className="close">
+          <div className="mini-modal" style={{display:'block'}}>
+		    <div className="mini-modal-body">
+			  <div className="mini-modal-main">
+			    <div className="mini-modal-header">
+				  <h5 className="mini-modal-title">Preview</h5>
+                  <button onClick={this.props.onHideModal} className="close-preview">
                     <span>×</span>
                 	</button>
                 </div>
-                <div className="modal-content">
+                <div className="mini-modal-content">
 				  <p className="preview-book-title">
                     {this.props.selectedSearch.title }
                   </p>	
@@ -31,7 +31,7 @@ class Modal extends Component{
 						((this.props.selectedSearch.industryIdentifiers).length && (
 						  this.props.selectedSearch.industryIdentifiers.map( (mod,i)=>
 					      <span className="isbn"  key={i}>
-							{(mod.type).toString().toUpperCase()}:																		    {mod.identifier}<br />
+							{(mod.type).toString().toUpperCase()}: {mod.identifier}<br />
 						  </span>   
 						  )
 						 ))	
