@@ -14,28 +14,28 @@ class Modal extends Component{
                 	</button>
                 </div>
                 <div className="mini-modal-content">
-				  <p className="preview-book-title">
+	          <p className="preview-book-title">
                     {this.props.selectedSearch.title }
                   </p>	
-				  <div className="left">
-				    <div className="book-cover"    
+		  <div className="left">
+		    <div className="book-cover"    
 					  style={{
 						  width: '128px', 
 						  height: '192px', 
 						  backgroundImage: 'url("'+this.props.selectedSearch.imageLinks.thumbnail+'")'
-						}}></div>
-					<p>
-					  {
-					     ((this.props.selectedSearch.industryIdentifiers).length && (
-						  this.props.selectedSearch.industryIdentifiers.map( (mod,i)=>
-					      <span className="isbn"  key={i}>
-						{(mod.type).toString().toUpperCase()}: {mod.identifier}<br />
-					      </span>   
-					      )))	
-					   }
-					</p>
-				 </div>
-				 <div className="right">
+					}}></div>
+			<p>
+			 {
+			     ((this.props.selectedSearch.industryIdentifiers).length && (
+			     this.props.selectedSearch.industryIdentifiers.map( (mod,i)=>
+			      <span className="isbn"  key={i}>
+				{(mod.type).toString().toUpperCase()}: {mod.identifier}<br />
+			      </span>   
+			      )))	
+			  }
+			</p>
+		      </div>
+		     <div className="right">
 					<p className="publish">
 					  {this.props.selectedSearch.publisher }<br />
 					  {this.props.selectedSearch.publishedDate}
@@ -45,11 +45,11 @@ class Modal extends Component{
 						{this.props.selectedSearch.description}
 					</span>
 				 </div>
-                </div>
-              </div>
-		    </div>
-      	  </div>
-        </div>
+       </div>
+      </div>
+		 </div>
+     </div>
+    </div>
     )
   }
 }
