@@ -1,0 +1,32 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+fieldset, label { margin: 0; padding: 0;border:none }
+
+fieldset{ position:absolute;bottom:-10px}
+
+.rating > label:before, .empty > label:before { 
+  margin: 5px;
+  font-size: 1em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+  /*color: #FFD700;*/
+  color:#ddd
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+   color: #FFD700;
+}
+
+
+
+
+.rating > .full:before { 
+  color: #FFD700;
+}
+
+.rating > .empty:before { 
+  color: #FFD700;
+}
