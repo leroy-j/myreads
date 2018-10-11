@@ -31,21 +31,21 @@ class Modal extends Component{
 		}
 		</p>
 	     </div>
-			  <div className="right">
-				  <p className="publish">
-					  {this.props.selectedSearch.publisher }<br />
-					  {this.props.selectedSearch.publishedDate}
-          </p>
-				<p>Description:</p>	
-					<span className="preview-book-description"> 
-						{this.props.selectedSearch.description}
-					</span>
-				 </div>
-       </div>
+             <div className="right">
+               <p className="publish">
+		{this.props.selectedSearch.publisher }<br />
+		{this.props.selectedSearch.publishedDate}
+               </p>
+               <p>Description:</p>
+                 <span className="preview-book-description"> 
+		  {this.props.selectedSearch.description}
+                 </span>
+            </div>
+          </div>
       </div>
-		 </div>
      </div>
     </div>
+   </div>
     )
   }
 }
