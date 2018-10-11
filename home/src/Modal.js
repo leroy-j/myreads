@@ -26,14 +26,13 @@ class Modal extends Component{
 						}}></div>
 					<p>
 					  {
-						((this.props.selectedSearch.industryIdentifiers).length && (
+					     ((this.props.selectedSearch.industryIdentifiers).length && (
 						  this.props.selectedSearch.industryIdentifiers.map( (mod,i)=>
 					      <span className="isbn"  key={i}>
-							{(mod.type).toString().toUpperCase()}: {mod.identifier}<br />
-						  </span>   
-						  )
-						 ))	
-						}
+						{(mod.type).toString().toUpperCase()}: {mod.identifier}<br />
+					      </span>   
+					      )))	
+					   }
 					</p>
 				 </div>
 				 <div className="right">
