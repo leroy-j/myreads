@@ -18,9 +18,7 @@ class Modal extends Component{
                     {this.props.selectedSearch.title }
                   </p>	
 				  <div className="left">
-				    <div 
-					  className="book-cover" 
-					  href="/preview?id=zjTc4R2AGyIC" 
+				    <div className="book-cover"    
 					  style={{
 							    width: '128px', 
 								height: '192px', 
