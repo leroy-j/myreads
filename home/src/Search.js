@@ -129,26 +129,22 @@ render(){
           //(this.checkResults()) ? (this.props.searchResults.map((book,i)=>
           (this.checkResults()) ? (_.merge(this.props.searchResults,this.props.books).map((book,i)=>
             (<li key={i}>
-				<div className="book">
-				  <div className="book-top">
-                    <a href="" title="Click to preview"  onClick={this.onPreview} 
-						name={book.id}
-						className="book-cover" 
-						style={{width: '128px', 
+	       <div className="book">
+	         <div className="book-top">
+                   <a href="" title="Click to preview"  onClick={this.onPreview} name={book.id} className="book-cover" 
+				style={{width: '128px', 
                                 height: '192px', 
                                 backgroundImage: 'url('+book.imageLinks.thumbnail+')'}} >  </a>
-						
-					<div className="book-shelf-changer">
-					  <select onChange={this.onShelfChange} 
-							defaultValue={book.shelf?book.shelf:'none'} name={book.id}>
-					    <option value="move" disabled="">Move to...</option>
-						<option value="currentlyReading">Currently Reading</option>
-						<option value="wantToRead">Want to Read</option>
-						<option value="read">Read</option>
-						<option value="none">None</option>
-					  </select>
-				   </div>
-          </div>
+		 <div className="book-shelf-changer">
+	           <select onChange={this.onShelfChange} defaultValue={book.shelf?book.shelf:'none'} name={book.id}>
+		     <option value="move" disabled="">Move to...</option>
+	             <option value="currentlyReading">Currently Reading</option>
+	             <option value="wantToRead">Want to Read</option>
+	             <option value="read">Read</option>
+	             <option value="none">None</option>
+	           </select>
+		</div>
+              </div>
           <div className="book-title">{book.title}</div>
           <div className="book-authors">
 	    {
