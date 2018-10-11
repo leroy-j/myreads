@@ -3,23 +3,23 @@ import React, {Component} from 'react'
 class Modal extends Component{
   render(){ console.log('Modal:',this.props)
     return (
-        <div className="DialogHolder">
-          <div className="mini-modal" style={{display:'block'}}>
-	    			<div className="mini-modal-body">
-							<div className="mini-modal-main">
-								<div className="mini-modal-header">
-									<h5 className="mini-modal-title">Preview</h5>
-                  <button onClick={this.props.onHideModal} className="close-preview">
-                    <span>×</span>
-                	</button>
-                </div>
-                <div className="mini-modal-content">
-	                <p className="preview-book-title">
-                    {this.props.selectedSearch.title }
-                  </p>	
-		              <div className="left">
-		                <div className="book-cover" style={{width:'128px',height:'192px',backgroundImage: 'url("'+this.props.selectedSearch.imageLinks.thumbnail+'")'
-					}}></div>
+      <div className="DialogHolder">
+        <div className="mini-modal" style={{display:'block'}}>
+	    	  <div className="mini-modal-body">
+					  <div className="mini-modal-main">
+						  <div className="mini-modal-header">
+							  <h5 className="mini-modal-title">Preview</h5>
+                <button onClick={this.props.onHideModal} className="close-preview">
+                  <span>×</span>
+              	</button>
+              </div>
+              <div className="mini-modal-content">
+	              <p className="preview-book-title">
+                  {this.props.selectedSearch.title }
+                </p>	
+		          <div className="left">
+		            <div className="book-cover" style={{width:'128px',height:'192px',backgroundImage: 'url("'+this.props.selectedSearch.imageLinks.thumbnail+'")'
+			}}></div>
 			<p>
 			 {
 			     ((this.props.selectedSearch.industryIdentifiers).length && (
