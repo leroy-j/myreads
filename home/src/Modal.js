@@ -42,7 +42,7 @@ class Modal extends Component{
                  </span>
             </div>
           </div>
-      </div>
+        </div>
      </div>
     </div>
    </div>
