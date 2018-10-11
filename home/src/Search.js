@@ -1,21 +1,38 @@
 import React, {Component} from 'react'
+
 import mapObject from './utils.js'
+
 import PropTypes from 'prop-types'
+
 import { Link } from 'react-router-dom'
+
 import _ from 'lodash'
+
 import Modal from './Modal'
 
+
+
 class Search extends Component{
-  constructor(props) {
-    super(props);
-    this.props = props
-    this.state = {showModal: false,selectedSearch:{}}
-    this.onPreview  = this.onPreview.bind(this);
-    this.onHideModal = this.onHideModal.bind(this);
-    this.onShelfChange = this.onShelfChange.bind(this)
-  } 
   
-  onPreview(e) { 
+  constructor(props) {
+    
+    super(props);
+    
+    this.props = props
+    
+    this.state = {showModal: false,selectedSearch:{}}
+    
+    this.onPreview  = this.onPreview.bind(this);
+    
+    this.onHideModal = this.onHideModal.bind(this);
+    
+    this.onShelfChange = this.onShelfChange.bind(this)
+  
+} 
+  
+  
+    
+onPreview(e) { 
     let _book = {}
     e.preventDefault()
     const bid = e.target.name            
