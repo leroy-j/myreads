@@ -151,31 +151,28 @@ render(){
           </div>
           <div className="book-title">{book.title}</div>
           <div className="book-authors">
-				   {
-             mapObject(book.authors).map((auth,i)=><p key={i} style={{margin:0,padding:0,color:'#999',fontSize:'0.8em'}}>{auth}</p>)
+	    {
+	     mapObject(book.authors).map((auth,i)=><p key={i} style={{margin:0,padding:0,color:'#999',fontSize:'0.8em'}}>{auth}</p>)
             }
            </div>
-					  {
-               this.rating({averageRating:book.averageRating})
-            }
-					  {
-   					    (parseInt(book.ratingsCount,0) > 0 )&& (<span style={{ fontSize:'0.7em',color:'blue'}}>{book.ratingsCount} - Reviews</span>)
-					   }
-					</div>
+	  {
+            this.rating({averageRating:book.averageRating})
+          }
+	  {
+   	    (parseInt(book.ratingsCount,0) > 0 )&& (<span style={{ fontSize:'0.7em',color:'blue'}}>{book.ratingsCount} - Reviews</span>)
+	  }
+	 </div>
         </li>))) : ( <li style={{ opacity:0.2}}>No results..</li>  )
-			}
-        </ol>
+       </ol>
+      </div>
+	     {
+         (this.state.showModal ) && 
+         (<Modal selectedSearch={selectedSearch} onHideModal={this.onHideModal}/>)
+        }
        </div>
-			{
-              (this.state.showModal ) && (
-              <Modal selectedSearch={selectedSearch} onHideModal={this.onHideModal}/>		)
-            }
-
-         </div>
       </div>
      )
   }
-
 }
 
 Search.propTypes={
