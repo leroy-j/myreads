@@ -15,7 +15,7 @@ class Search extends Component{
     this.onShelfChange = this.onShelfChange.bind(this)
   } 
   
-  onPreview(e) {
+  onPreview(e) { 
     let _book = {}
     e.preventDefault()
     const bid = e.target.name            
@@ -147,36 +147,24 @@ render(){
 						<option value="none">None</option>
 					  </select>
 				   </div>
-                 </div>
-                 <div className="book-title">{book.title}</div>
-                 <div className="book-authors">
-				   {
-                     mapObject(book.authors).map((auth,i)=>
-						<p key={i} style={{
-									margin:0,
-                                  	padding:0,
-                                  	color:'#999',
-                                  	fontSize:'0.8em' 
-                                 }}
-							>{auth}</p>
-                       )
-                     }
-                      </div>
-					  {
-                        this.rating({averageRating:book.averageRating})
-                      }
-					  {
-   					    (parseInt(book.ratingsCount,0) > 0 ) && 
-                        (<span style={{ fontSize:'0.7em',color:'blue'}}>{book.ratingsCount} - Reviews</span>)
-					   }
-                 </div>
-               </li>
-               )
-			  )
-			 ): ( <li style={{ opacity:0.2}}>No results..</li>  )
-			}
-             </ol>
           </div>
+          <div className="book-title">{book.title}</div>
+          <div className="book-authors">
+				   {
+             mapObject(book.authors).map((auth,i)=><p key={i} style={{margin:0,padding:0,color:'#999',fontSize:'0.8em'}}>{auth}</p>)
+            }
+           </div>
+					  {
+               this.rating({averageRating:book.averageRating})
+            }
+					  {
+   					    (parseInt(book.ratingsCount,0) > 0 )&& (<span style={{ fontSize:'0.7em',color:'blue'}}>{book.ratingsCount} - Reviews</span>)
+					   }
+					</div>
+        </li>))) : ( <li style={{ opacity:0.2}}>No results..</li>  )
+			}
+        </ol>
+       </div>
 			{
               (this.state.showModal ) && (
               <Modal selectedSearch={selectedSearch} onHideModal={this.onHideModal}/>		)
