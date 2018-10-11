@@ -14,15 +14,11 @@ class Modal extends Component{
                 	</button>
                 </div>
                 <div className="mini-modal-content">
-	          <p className="preview-book-title">
+	                <p className="preview-book-title">
                     {this.props.selectedSearch.title }
                   </p>	
-		  <div className="left">
-		    <div className="book-cover"    
-					  style={{
-						  width: '128px', 
-						  height: '192px', 
-						  backgroundImage: 'url("'+this.props.selectedSearch.imageLinks.thumbnail+'")'
+		              <div className="left">
+		                <div className="book-cover" style={{width:'128px',height:'192px',backgroundImage: 'url("'+this.props.selectedSearch.imageLinks.thumbnail+'")'
 					}}></div>
 			<p>
 			 {
