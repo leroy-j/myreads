@@ -70,21 +70,27 @@ class Search extends Component{
          { 
            stars.map((star,i)=>{ 
                if(star === '5')
-                 return (<span key={i} className="rating"> 
- 						  <label className="half" htmlFor="star{star}"></label>
-  						</span>)
+                 return (
+		   <span key={i} className="rating"> 
+	             <label className="half" htmlFor="star{star}"></label>
+  	           </span>
+                 )
                 else if(star ==='x'){ 
-                  return (<span key={i} className="empty"> 
- 						  <label className="half" htmlFor="star{i}" ></label>
-  						</span>)
+                  return (
+	            <span key={i} className="empty"> 
+ 		      <label className="half" htmlFor="star{i}" ></label>
+  	 	    </span>
+		  )
                 }
                  else
-                   return(<span key={i} className="rating"> 
- 						   <label className="full" htmlFor="star{star}"></label>
-  						   </span>)
+                   return(
+	             <span key={i} className="rating"> 
+ 		       <label className="full" htmlFor="star{star}"></label>
+  		     </span>
+		   )
             })
          }
-		</fieldset>
+	</fieldset>
     )
   }
   
